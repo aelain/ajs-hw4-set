@@ -1,7 +1,7 @@
 import Character from '../character';
 import Team from '../team';
 
-test('Checking of adding', () => {
+test('Checking addition', () => {
     const team = new Team();
     const character = new Character({ name: 'маг', health: 100 });
     const expected = team.members.size;
@@ -10,7 +10,7 @@ test('Checking of adding', () => {
     expect(received).not.toBe(expected);
 });
 
-test('Checking of re-adding', () => {
+test('Checking re-addition', () => {
     const team = new Team();
     const character = new Character({ name: 'маг', health: 100 });
     team.add(character);
@@ -20,7 +20,7 @@ test('Checking of re-adding', () => {
     expect(received).toBe(expected);
 });
 
-test('Checking of adding all', () => {
+test('Checking addition of all', () => {
     const team = new Team();
     const wizard = new Character({ name: 'маг', health: 100 });
     const swordsman = new Character({ name: 'мечник', health: 10 });
@@ -29,7 +29,7 @@ test('Checking of adding all', () => {
     expect(result).toBe(2);
 });
 
-test('Checking of re-adding all', () => {
+test('Checking re-addition of all', () => {
     const team = new Team();
     const wizard = new Character({ name: 'маг', health: 100 });
     const swordsman = new Character({ name: 'мечник', health: 10 });
@@ -38,7 +38,7 @@ test('Checking of re-adding all', () => {
     expect(result).toBe(2);
 });
 
-test('Checking of conversion to array', () => {
+test('Checking conversion to array', () => {
     const team = new Team();
     const wizard = new Character({ name: 'маг', health: 100 });
     const swordsman = new Character({ name: 'мечник', health: 10 });
